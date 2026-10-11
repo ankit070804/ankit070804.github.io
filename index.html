@@ -4,136 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ankit Singh | AI/ML Engineer</title>
-<meta name="description" content="Ankit Singh, AI/ML engineer. Projects in computer vision, NLP and explainable AI.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--on:#f5b53d;--line:rgba(255,255,255,.12);--muted:#94a3b8;--text:#cbd5e1}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#000;color:#e2e8f0;line-height:1.6;overflow-x:hidden}
-a{color:inherit}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:6px}
-.nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);z-index:10}
-.nav-in{max-width:1100px;margin:0 auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo{font-weight:800;font-size:22px;background:linear-gradient(135deg,#fff,#999);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
-.nav ul{display:flex;gap:28px;list-style:none;overflow-x:auto}
-.nav ul a{color:var(--text);text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap}
-.nav ul a:hover{color:#fff}
-.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
-.hero{min-height:100vh;display:flex;align-items:center;padding-top:90px}
-h1{font-size:clamp(46px,9vw,84px);font-weight:800;line-height:1.05;letter-spacing:-.03em;background:linear-gradient(135deg,#fff 0%,#cbd5e1 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.role{font-size:clamp(20px,3vw,28px);font-weight:700;margin:14px 0 18px;color:#fff}
-.lede{font-size:18px;color:var(--text);max-width:680px;line-height:1.8}
-.btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px}
-.btn{padding:14px 28px;border-radius:12px;font-weight:600;text-decoration:none;font-size:15px;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.p{background:linear-gradient(135deg,#fff,#ccc);color:#000;box-shadow:0 10px 40px rgba(255,255,255,.15)}
-.btn.s{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.2);color:#fff}
-.btn.s:hover{background:rgba(255,255,255,.14)}
-.morse{margin-top:44px;padding:22px 26px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03);max-width:680px}
-.word{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
-.letter{display:flex;gap:6px;align-items:center}
-.m{height:12px;border-radius:6px;background:rgba(255,255,255,.14);transition:background .12s,box-shadow .12s}
-.m.dot{width:12px}.m.dash{width:34px}
-.m.on{background:var(--on);box-shadow:0 0 14px rgba(245,181,61,.7)}
-.cap{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-top:14px;font-size:14px;color:var(--muted)}
-.cap button{font:inherit;color:#fff;background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-section{padding:90px 0 10px}
-.head{text-align:center;margin-bottom:48px}
-h2{font-size:clamp(32px,5vw,44px);font-weight:800;color:#fff;letter-spacing:-.02em}
-.sub{color:var(--muted);margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:18px;padding:30px;backdrop-filter:blur(20px);box-shadow:0 8px 32px rgba(0,0,0,.4);transition:transform .25s,border-color .25s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.3)}
-.card h3{font-size:20px;color:#fff;font-weight:700;margin-bottom:6px}
-.stack{font-size:13px;color:var(--on);margin-bottom:14px;font-weight:500}
-.card p{color:var(--text);font-size:15px;line-height:1.7}
-.card .go{margin-top:auto;padding-top:18px;font-weight:600;font-size:14px;color:#fff}
-.more{margin-top:22px;border:1px solid var(--line);border-radius:18px;padding:22px 30px;background:rgba(255,255,255,.02)}
-.more summary{cursor:pointer;font-weight:600;color:#fff}
-.more ul{margin:14px 0 0 20px;color:var(--text);font-size:15px}
-.more li{margin-bottom:8px}
-.job{background:rgba(255,255,255,.03);border:1px solid var(--line);border-left:4px solid #fff;border-radius:18px;padding:34px}
-.jh{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
-.jh h3{font-size:22px;color:#fff}
-.when{color:var(--muted);font-size:15px}
-.job ul{margin-left:20px;color:var(--text)}
-.job li{margin-bottom:10px}
-.skills{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.skills h3{font-size:17px}
-.skills p{color:var(--muted)}
-.ach{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.ach h3{font-size:17px}
-.ach p a{color:#fff}
-footer{margin-top:90px;border-top:1px solid var(--line);padding:70px 28px;text-align:center}
-footer h2{font-size:34px}
-footer p{color:var(--muted);margin:12px auto 0;max-width:520px}
-.soc{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:28px 0}
-.copy{font-size:13px}
-@media(max-width:640px){.nav ul{gap:18px}.nav-in{padding:14px 18px}.wrap{padding:0 18px}.card,.job{padding:24px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
-</style>
+<meta name="description" content="Ankit Singh, AI/ML engineer. Projects in computer vision, NLP, explainable AI and ML monitoring.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav"><div class="nav-in">
-  <a class="logo" href="#top">AS</a>
-  <ul><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li></ul>
-</div></nav>
+<div class="layout">
 
-<header class="hero" id="top"><div class="wrap">
+<header class="side">
   <h1>Ankit Singh</h1>
   <p class="role">AI/ML Engineer, joining Injala</p>
-  <p class="lede">B.Tech in Computer Science (AI) at Marwadi University. I build machine learning systems for real problems, like letting people communicate with eye blinks, or showing why a model called a face fake.</p>
-  <div class="btns">
-    <a class="btn p" href="#projects">View my work</a>
-    <a class="btn s" href="https://drive.google.com/file/d/1XsjyRt7FpZQTu0dJ3EdubBIKskEDCNf5/view?usp=drive_link" target="_blank" rel="noopener">Resume (PDF)</a>
-    <a class="btn s" href="#contact">Get in touch</a>
-  </div>
+  <p class="tag">I build machine learning systems for real problems: computer vision, explainable AI and model monitoring.</p>
+  <nav aria-label="Sections"><ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+  </ul></nav>
+  <a class="cta" href="https://drive.google.com/file/d/1XsjyRt7FpZQTu0dJ3EdubBIKskEDCNf5/view?usp=drive_link" target="_blank" rel="noopener">View resume</a>
   <div class="morse">
     <div class="word" id="word" role="img" aria-label="My name, Ankit, in Morse code"></div>
-    <div class="cap"><span>That is my name in Morse code. My main project turns eye blinks into text this way.</span><button id="replay" type="button">Replay</button></div>
+    <p class="mc">My name in Morse code, the way my main project reads eye blinks. <button id="replay" type="button">Replay</button></p>
   </div>
-</div></header>
+  <div class="soc">
+    <a href="https://github.com/ankit070804">GitHub</a>
+    <a href="https://linkedin.com/in/ankit-singh-798b432a0/">LinkedIn</a>
+    <a href="https://leetcode.com/u/ankit070804">LeetCode</a>
+    <a href="mailto:singhankit70702004@gmail.com">Email</a>
+  </div>
+</header>
 
-<div class="wrap">
+<main>
+<section id="about">
+  <h2 class="st">About</h2>
+  <p>I'm a final-year B.Tech student in Computer Science (AI) at Marwadi University, Rajkot, and I'll start as an AI/ML Engineer at Injala.</p>
+  <p>I like projects where the model has to be trusted: one that explains why it flagged a face as fake, one that predicts when a drone's navigation will go wrong, and one that notices when a deployed model starts to drift. I also solve problems on LeetCode (300 solved) to keep my fundamentals sharp.</p>
+</section>
+
 <section id="projects">
-  <div class="head"><h2>Projects</h2><p class="sub">Computer vision, NLP and explainable AI</p></div>
-  <div class="grid">
-    <article class="card">
-      <h3>Assistive communication framework</h3>
-      <p class="stack">Python, PyTorch, OpenCV, MediaPipe, Transformers</p>
-      <p>Converts eye blinks into Morse code so people who cannot speak or type can still communicate. Adds Sign Language Grammar, Trie-based word prediction and a Digital Twin for logging. I fine-tuned and compared Transformer models for SLG-to-English translation and chose Flan-T5-small for the best quality and latency trade-off. It cuts blinks by 26.7% on average, up to 44.9% for long sentences.</p>
-      <!-- TODO: replace with the exact repo link -->
-      <a class="go" href="https://github.com/ankit070804">Code on GitHub →</a>
-    </article>
-    <article class="card">
-      <h3>UAV localization error prediction</h3>
-      <p class="stack">Python, Scikit-learn, SHAP, OpenCV, Ollama (local LLM)</p>
-      <p>Predicts how far off a drone's visual localization will be, frame by frame, from image, depth, segmentation and pose data (TartanAir). Each prediction is explained with SHAP, and a local LLM turns the top features into a plain-language report. Tested by holding out whole flight sequences, which gives an honest R² of about 0.79 on unseen routes, versus 0.92 on a random split that leaks nearby frames.</p>
-      <a class="go" href="https://github.com/ankit070804/Xai_UAV">Code on GitHub →</a>
-    </article>
-    <article class="card">
-      <h3>Explainable deepfake detection</h3>
-      <p class="stack">PyTorch, EfficientNet-B0, OpenCV, Streamlit</p>
-      <p>Classifies a face image as real or fake, then uses Grad-CAM to highlight the regions that drove the decision, so the prediction can be checked instead of trusted blindly.</p>
-      <!-- TODO: replace with the exact repo link -->
-      <a class="go" href="https://github.com/ankit070804">Code on GitHub →</a>
-    </article>
-    <article class="card">
-      <h3>ModelGuardian: ML drift monitoring</h3>
-      <p class="stack">Python, FastAPI, scikit-learn, TypeScript, Next.js</p>
-      <p>Team project built in 6 hours at the myonsite Ascend hackathon. Watches a deployed fraud-detection model, detects drift with Kolmogorov-Smirnov and KL divergence written from scratch (no drift libraries), and triggers an automated rollback through GitHub Actions. Includes a live dashboard and a traffic generator that simulates normal, drifted and adversarial inputs.</p>
-      <!-- TODO: add one line on your own part, e.g. "I built the drift engine." -->
-      <a class="go" href="https://github.com/Krithik0908/ModelGuardian8282">Code on GitHub →</a>
-    </article>
-    <article class="card">
-      <h3>Fake news propagation system</h3>
-      <p class="stack">Python, Scikit-learn, Streamlit, Plotly</p>
-      <p>TF-IDF and Random Forest classifier trained on 800+ PolitiFact articles, with 77% accuracy and a 0.77 F1-score. Runs in Streamlit with live probability scores and simulates how a story spreads using the SIR model.</p>
-      <!-- TODO: replace with the exact repo link -->
-      <a class="go" href="https://github.com/ankit070804">Code on GitHub →</a>
-    </article>
-  </div>
+  <h2 class="st">Projects</h2>
+
+  <a class="row" href="https://github.com/ankit070804">
+    <!-- TODO: replace with the exact repo link -->
+    <h3>Assistive communication framework<span>↗</span></h3>
+    <p>Converts eye blinks into Morse code so people who cannot speak or type can still communicate. Adds Sign Language Grammar, Trie-based word prediction and a Digital Twin for logging. I compared fine-tuned Transformer models and chose Flan-T5-small for the best quality and latency trade-off. It cuts blinks by 26.7% on average, up to 44.9% for long sentences.</p>
+    <ul class="chips"><li>PyTorch</li><li>OpenCV</li><li>MediaPipe</li><li>Transformers</li></ul>
+  </a>
+
+  <a class="row" href="https://github.com/ankit070804/Xai_UAV">
+    <h3>UAV localization error prediction<span>↗</span></h3>
+    <p>Predicts how far off a drone's visual localization will be, frame by frame, from image, depth, segmentation and pose data (TartanAir). Each prediction is explained with SHAP, and a local LLM writes a plain-language report. Tested by holding out whole flight sequences: R² of about 0.79 on unseen routes, versus 0.92 on a random split that leaks nearby frames.</p>
+    <ul class="chips"><li>Scikit-learn</li><li>SHAP</li><li>OpenCV</li><li>Ollama</li></ul>
+  </a>
+
+  <a class="row" href="https://github.com/Krithik0908/ModelGuardian8282">
+    <!-- TODO: add one line on your own part, e.g. "I built the drift engine." -->
+    <h3>ModelGuardian: ML drift monitoring<span>↗</span><span class="tagline">Team project</span></h3>
+    <p>Built in 6 hours at the myonsite Ascend hackathon. Watches a deployed fraud-detection model, detects drift with Kolmogorov-Smirnov and KL divergence written from scratch (no drift libraries), and triggers an automated rollback through GitHub Actions. Includes a live dashboard and a traffic generator for normal, drifted and adversarial inputs.</p>
+    <ul class="chips"><li>FastAPI</li><li>TypeScript</li><li>Next.js</li><li>GitHub Actions</li></ul>
+  </a>
+
+  <a class="row" href="https://github.com/ankit070804">
+    <!-- TODO: replace with the exact repo link -->
+    <h3>Explainable deepfake detection<span>↗</span></h3>
+    <p>Classifies a face image as real or fake, then uses Grad-CAM to highlight the regions that drove the decision, so the prediction can be checked instead of trusted blindly.</p>
+    <ul class="chips"><li>PyTorch</li><li>EfficientNet-B0</li><li>Grad-CAM</li><li>Streamlit</li></ul>
+  </a>
+
+  <a class="row" href="https://github.com/ankit070804">
+    <!-- TODO: replace with the exact repo link -->
+    <h3>Fake news propagation system<span>↗</span></h3>
+    <p>TF-IDF and Random Forest classifier trained on 800+ PolitiFact articles, with 77% accuracy and a 0.77 F1-score. Runs in Streamlit with live probability scores and simulates how a story spreads using the SIR model.</p>
+    <ul class="chips"><li>Scikit-learn</li><li>Plotly</li><li>Streamlit</li></ul>
+  </a>
+
   <details class="more">
     <summary>Earlier data analytics work</summary>
     <ul>
@@ -144,51 +89,41 @@ footer p{color:var(--muted);margin:12px auto 0;max-width:520px}
 </section>
 
 <section id="experience">
-  <div class="head"><h2>Experience</h2></div>
+  <h2 class="st">Experience</h2>
   <div class="job">
-    <div class="jh"><div><h3>AI and Data Analytics Intern</h3><p class="when">Printf Technologies, Ahmedabad</p></div><p class="when">Jun 2025 to Dec 2025</p></div>
+    <div class="jh"><h3>AI and Data Analytics Intern, Printf Technologies</h3><span class="when">Jun 2025 to Dec 2025</span></div>
     <ul>
       <li>Built a Power BI tax collection dashboard for a Gram Panchayat, tracking revenue targets and collection efficiency, with automated refresh through a Power BI Gateway I configured myself.</li>
       <li>Trained a Random Forest classifier on 10,000+ customer transactions to predict churn and repeat purchases.</li>
       <li>Ran the dashboard project alone, from gathering requirements to deployment and iteration with non-technical users.</li>
     </ul>
-    <p style="margin-top:14px"><a href="https://drive.google.com/file/d/1JyYsDb9m5AHzuBBuxlPqj8ADcsmUvKp5/view?usp=sharing" style="color:#fff">Internship completion letter →</a></p>
   </div>
 </section>
 
 <section id="skills">
-  <div class="head"><h2>Skills</h2></div>
-  <div class="grid skills">
-    <div class="card"><h3>Languages</h3><p>Python, C++, C, SQL</p></div>
-    <div class="card"><h3>ML and AI</h3><p>PyTorch, Scikit-learn, deep learning, transfer learning, Transformers, Grad-CAM</p></div>
-    <div class="card"><h3>Computer vision</h3><p>OpenCV, MediaPipe, CNNs, EfficientNet</p></div>
-    <div class="card"><h3>Data and BI</h3><p>Pandas, NumPy, Power BI, DAX, Matplotlib, Excel</p></div>
-    <div class="card"><h3>Tools</h3><p>Git, GitHub, Streamlit, Jupyter</p></div>
-  </div>
+  <h2 class="st">Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>Python, C++, C, SQL</dd>
+    <dt>ML and AI</dt><dd>PyTorch, Scikit-learn, deep learning, transfer learning, Transformers, SHAP, Grad-CAM</dd>
+    <dt>Computer vision</dt><dd>OpenCV, MediaPipe, CNNs, EfficientNet</dd>
+    <dt>Data</dt><dd>Pandas, NumPy, Power BI, DAX, Matplotlib, Excel</dd>
+    <dt>Tools</dt><dd>Git, GitHub, Streamlit, FastAPI, Jupyter</dd>
+  </dl>
 </section>
 
 <section id="achievements">
-  <div class="head"><h2>Achievements</h2></div>
-  <div class="grid ach">
-    <div class="card"><h3>LeetCode</h3><p>300 problems solved, contest rating 1,531, 100 Days Badge. <a href="https://leetcode.com/u/ankit070804">Profile</a></p></div>
-    <div class="card"><h3>AI-Tech Carnival 2026</h3><p>2nd place in the competitive programming contest.</p></div>
-    <div class="card"><h3>Parul Hackverse 2025</h3><p>Reached the final round of a national hackathon.</p></div>
-    <div class="card"><h3>IOQM 2020</h3><p>Qualified the Indian Olympiad Qualifier in Mathematics. <a href="https://drive.google.com/file/d/1-3J5kjldg_GvGEsEEDxadyMsQcB2fzYu/view?usp=drivesdk">Certificate</a></p></div>
-    <div class="card"><h3>Certifications</h3><p><a href="https://drive.google.com/file/d/1aalMlPUxeFJ89U98GKLD8vX6KpwXxWJ2/view">Python Essentials</a> (Cisco), <a href="https://drive.google.com/file/d/1DDHhw8gQvP4TMS0jKgCLqzT0YomZRmzK/view">Python for Data Science</a> (IBM), <a href="https://drive.google.com/file/d/1-yga8P7pkkhGnDfAek572FQHrDT5M1cZ/view">SQL</a> (Oracle)</p></div>
-  </div>
+  <h2 class="st">Achievements</h2>
+  <ul class="ach">
+    <li><b>LeetCode:</b> 300 problems solved, contest rating 1,531, 100 Days Badge. <a href="https://leetcode.com/u/ankit070804">Profile</a></li>
+    <li><b>AI-Tech Carnival 2026:</b> 2nd place, competitive programming contest.</li>
+    <li><b>Parul Hackverse 2025:</b> reached the final round of a national hackathon.</li>
+    <li><b>IOQM 2020:</b> qualified the Indian Olympiad Qualifier in Mathematics. <a href="https://drive.google.com/file/d/1-3J5kjldg_GvGEsEEDxadyMsQcB2fzYu/view?usp=drivesdk">Certificate</a></li>
+    <li><b>Certifications:</b> <a href="https://drive.google.com/file/d/1aalMlPUxeFJ89U98GKLD8vX6KpwXxWJ2/view">Python Essentials</a> (Cisco), <a href="https://drive.google.com/file/d/1DDHhw8gQvP4TMS0jKgCLqzT0YomZRmzK/view">Python for Data Science</a> (IBM), <a href="https://drive.google.com/file/d/1-yga8P7pkkhGnDfAek572FQHrDT5M1cZ/view">SQL</a> (Oracle)</li>
+  </ul>
 </section>
+<p class="foot">&copy; 2026 Ankit Singh</p>
+</main>
 </div>
-
-<footer id="contact">
-  <h2>Let's talk</h2>
-  <p>Happy to chat about ML, computer vision, or placement prep for juniors.</p>
-  <div class="soc">
-    <a class="btn s" href="mailto:singhankit70702004@gmail.com">Email</a>
-    <a class="btn s" href="https://linkedin.com/in/ankit-singh-798b432a0/">LinkedIn</a>
-    <a class="btn s" href="https://github.com/ankit070804">GitHub</a>
-  </div>
-  <p class="copy">&copy; 2026 Ankit Singh</p>
-</footer>
 
 <script>
 (function(){
@@ -207,13 +142,19 @@ footer p{color:var(--muted);margin:12px auto 0;max-width:520px}
     marks.forEach(function(x){x.el.classList.remove('on')});
     if(reduce){marks.forEach(function(x){x.el.classList.add('on')});return}
     var t=500,u=170;
-    marks.forEach(function(x){
-      timers.push(setTimeout(function(){x.el.classList.add('on')},t));
-      t+=x.len*u+u;
-    });
+    marks.forEach(function(x){timers.push(setTimeout(function(){x.el.classList.add('on')},t));t+=x.len*u+u});
   }
   document.getElementById('replay').addEventListener('click',play);
   play();
+  var links=document.querySelectorAll('.menu a'),secs=document.querySelectorAll('main section');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}
+      });
+    },{rootMargin:'-30% 0px -60% 0px'});
+    secs.forEach(function(s){io.observe(s)});
+  }
 })();
 </script>
 </body>
