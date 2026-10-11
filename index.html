@@ -18,6 +18,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#achievements">Achievements</a></li>
   </ul></nav>
@@ -38,51 +39,89 @@
 <section id="about">
   <h2 class="st">About</h2>
   <p>I'm a final-year B.Tech student in Computer Science (AI) at Marwadi University, Rajkot, and I'll start as an AI/ML Engineer at Injala.</p>
-  <p>I like projects where the model has to be trusted: one that explains why it flagged a face as fake, one that predicts when a drone's navigation will go wrong, and one that notices when a deployed model starts to drift. I also solve problems on LeetCode (300 solved) to keep my fundamentals sharp.</p>
+  <p>I like projects where a model has to be trusted: one that shows why it flagged a face as fake, one that predicts when a drone's navigation will go wrong, and one that notices when a deployed model starts to drift. In each of them, the part I care about most is how the result is measured and explained, not just the accuracy number.</p>
+  <p>Before moving fully into ML, I worked as an AI and data analytics intern, where I built dashboards and a churn model for real stakeholders. That taught me to start from the question someone is asking, not from the algorithm. Outside coursework I solve problems on LeetCode and enter hackathons and contests, which keeps my fundamentals sharp and my building fast.</p>
+  <ul class="facts">
+    <li><b>5</b><span>ML projects</span></li>
+    <li><b>6 months</b><span>AI and analytics internship</span></li>
+    <li><b>300</b><span>LeetCode problems solved</span></li>
+    <li><b>2nd place</b><span>AI-Tech Carnival 2026</span></li>
+  </ul>
 </section>
 
 <section id="projects">
   <h2 class="st">Projects</h2>
 
-  <a class="row" href="https://github.com/ankit070804">
-    <!-- TODO: replace with the exact repo link -->
+  <a class="row" href="https://github.com/akhilkandoi/research-blink-reduction-with-slg">
     <h3>Assistive communication framework<span>↗</span></h3>
-    <p>Converts eye blinks into Morse code so people who cannot speak or type can still communicate. Adds Sign Language Grammar, Trie-based word prediction and a Digital Twin for logging. I compared fine-tuned Transformer models and chose Flan-T5-small for the best quality and latency trade-off. It cuts blinks by 26.7% on average, up to 44.9% for long sentences.</p>
+    <p>A system that lets someone communicate using only eye blinks, for people who cannot speak or type. Blinks are read from a webcam and decoded as Morse code. The hard part is that Morse by blinking is slow, so the project is about reducing how many blinks a sentence needs.</p>
+    <span class="lab">What I built</span>
+    <ul class="pts">
+      <li>Blink detection with MediaPipe and OpenCV, converted into Morse code in real time.</li>
+      <li>Sign Language Grammar (SLG), which shortens sentences before they are blinked out, plus a Trie for word prediction and a Digital Twin that logs sessions.</li>
+      <li>Fine-tuned and compared Transformer models for SLG-to-English translation, and chose Flan-T5-small for the best quality and latency trade-off.</li>
+    </ul>
+    <span class="lab">Result</span>
+    <p>Blinks cut by 26.7% on average, and by up to 44.9% for long sentences.</p>
     <ul class="chips"><li>PyTorch</li><li>OpenCV</li><li>MediaPipe</li><li>Transformers</li></ul>
   </a>
 
   <a class="row" href="https://github.com/ankit070804/Xai_UAV">
     <h3>UAV localization error prediction<span>↗</span></h3>
-    <p>Predicts how far off a drone's visual localization will be, frame by frame, from image, depth, segmentation and pose data (TartanAir). Each prediction is explained with SHAP, and a local LLM writes a plain-language report. Tested by holding out whole flight sequences: R² of about 0.79 on unseen routes, versus 0.92 on a random split that leaks nearby frames.</p>
+    <p>When a drone navigates by camera, its position estimate is sometimes badly wrong. This project predicts how large that localization error will be for each frame, and explains every prediction so a person can see why.</p>
+    <span class="lab">What I built</span>
+    <ul class="pts">
+      <li>A full pipeline on the TartanAir dataset: visual, semantic, depth and motion features per frame, ground-truth error labels from ORB matching and pose comparison, and a Random Forest regressor.</li>
+      <li>SHAP explanations for each prediction, and a local LLM (via Ollama) that turns the top features into a plain-language report.</li>
+      <li>Four different train/test splits, so the score is not inflated by near-duplicate neighbouring frames.</li>
+    </ul>
+    <span class="lab">Result and what I learned</span>
+    <p>R² of about 0.79 on routes the model had never seen (leave-one-sequence-out, range 0.53 to 0.90), versus 0.92 on a random split that leaks adjacent frames. I also found that ORB features account for about 73% of importance, partly because the labels are built from ORB matches, and documented it as a limitation.</p>
     <ul class="chips"><li>Scikit-learn</li><li>SHAP</li><li>OpenCV</li><li>Ollama</li></ul>
   </a>
 
   <a class="row" href="https://github.com/Krithik0908/ModelGuardian8282">
     <!-- TODO: add one line on your own part, e.g. "I built the drift engine." -->
     <h3>ModelGuardian: ML drift monitoring<span>↗</span><span class="tagline">Team project</span></h3>
-    <p>Built in 6 hours at the myonsite Ascend hackathon. Watches a deployed fraud-detection model, detects drift with Kolmogorov-Smirnov and KL divergence written from scratch (no drift libraries), and triggers an automated rollback through GitHub Actions. Includes a live dashboard and a traffic generator for normal, drifted and adversarial inputs.</p>
+    <p>Built in 6 hours at the myonsite Ascend hackathon. A deployed model can quietly get worse when live data stops looking like its training data, and ModelGuardian is a pipeline that notices and reacts on its own.</p>
+    <span class="lab">How it works</span>
+    <ul class="pts">
+      <li>Five small services: a fraud-detection model, a log pipeline, a drift engine, a rollback controller and a live dashboard.</li>
+      <li>Drift is measured with a Kolmogorov-Smirnov test and KL divergence written from scratch, with no drift libraries. A KS value of 0.3 raises a warning, and a critical alert triggers an automatic rollback through GitHub Actions.</li>
+      <li>A traffic generator simulates normal, drifted and adversarial inputs, such as balance spoofing and out-of-bounds values, to test the whole loop.</li>
+    </ul>
     <ul class="chips"><li>FastAPI</li><li>TypeScript</li><li>Next.js</li><li>GitHub Actions</li></ul>
   </a>
 
   <a class="row" href="https://github.com/ankit070804">
-    <!-- TODO: replace with the exact repo link -->
+    <!-- TODO: replace with the exact repo link, and add an accuracy number if you have one -->
     <h3>Explainable deepfake detection<span>↗</span></h3>
-    <p>Classifies a face image as real or fake, then uses Grad-CAM to highlight the regions that drove the decision, so the prediction can be checked instead of trusted blindly.</p>
+    <p>Most deepfake detectors give a label and nothing else. This one classifies a face image as real or fake and then shows which parts of the face drove the decision.</p>
+    <ul class="pts">
+      <li>EfficientNet-B0 fine-tuned with transfer learning in PyTorch to classify faces as real or fake.</li>
+      <li>Grad-CAM heatmaps overlaid on the image, so the prediction can be checked instead of trusted blindly.</li>
+      <li>A Streamlit app where you upload an image and see the verdict and the heatmap together.</li>
+    </ul>
     <ul class="chips"><li>PyTorch</li><li>EfficientNet-B0</li><li>Grad-CAM</li><li>Streamlit</li></ul>
   </a>
 
   <a class="row" href="https://github.com/ankit070804">
     <!-- TODO: replace with the exact repo link -->
     <h3>Fake news propagation system<span>↗</span></h3>
-    <p>TF-IDF and Random Forest classifier trained on 800+ PolitiFact articles, with 77% accuracy and a 0.77 F1-score. Runs in Streamlit with live probability scores and simulates how a story spreads using the SIR model.</p>
+    <p>Two questions in one project: is this article likely fake, and if it were shared, how far would it spread?</p>
+    <ul class="pts">
+      <li>TF-IDF and a Random Forest classifier trained on 800+ PolitiFact articles, with 77% accuracy and a 0.77 F1-score.</li>
+      <li>A Streamlit app that shows live probability scores for any text you paste.</li>
+      <li>A SIR epidemic model that simulates how a story spreads, visualised with Plotly and network graphs.</li>
+    </ul>
     <ul class="chips"><li>Scikit-learn</li><li>Plotly</li><li>Streamlit</li></ul>
   </a>
 
   <details class="more">
     <summary>Earlier data analytics work</summary>
     <ul>
-      <li><a href="https://app.powerbi.com/view?r=eyJrIjoiOTAwNjQwODEtMDVkNC00ZTg4LWEwYzUtMjdmZTMzYTdhNTk5IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9">Bank data analysis</a>: SQL, Excel and a Power BI dashboard of regional spending patterns (FP20 Challenge).</li>
-      <li><a href="https://github.com/ankit070804/ONYX-DATA-challenge-Social-Media-Analysis/tree/main">Social media performance analysis</a>: SQL, Pandas and Power BI on engagement by platform and content type (ONYX).</li>
+      <li><a href="https://app.powerbi.com/view?r=eyJrIjoiOTAwNjQwODEtMDVkNC00ZTg4LWEwYzUtMjdmZTMzYTdhNTk5IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9">Bank data analysis</a>: cleaned banking data with SQL and Excel and built a Power BI dashboard of regional spending patterns (FP20 Challenge).</li>
+      <li><a href="https://github.com/ankit070804/ONYX-DATA-challenge-Social-Media-Analysis/tree/main">Social media performance analysis</a>: analysed engagement by platform and content type with SQL and Pandas, and presented it in Power BI (ONYX).</li>
     </ul>
   </details>
 </section>
@@ -91,11 +130,25 @@
   <h2 class="st">Experience</h2>
   <div class="job">
     <div class="jh"><h3>AI and Data Analytics Intern, Printf Technologies</h3><span class="when">Jun 2025 to Dec 2025</span></div>
+    <p style="margin-top:8px;color:var(--muted);font-size:15px">Ahmedabad, Gujarat</p>
     <ul>
-      <li>Built a Power BI tax collection dashboard for a Gram Panchayat, tracking revenue targets and collection efficiency, with automated refresh through a Power BI Gateway I configured myself.</li>
-      <li>Trained a Random Forest classifier on 10,000+ customer transactions to predict churn and repeat purchases.</li>
-      <li>Ran the dashboard project alone, from gathering requirements to deployment and iteration with non-technical users.</li>
+      <li><b>Tax collection dashboard.</b> Built an end-to-end Power BI dashboard for a Gram Panchayat that tracks revenue targets and collection efficiency, so officials could see how collection was going without reading spreadsheets.</li>
+      <li><b>Automated data refresh.</b> Set up and configured a Power BI Gateway myself so the dashboard updates automatically and securely.</li>
+      <li><b>Churn prediction.</b> Trained a Random Forest classifier on 10,000+ customer transactions to predict churn and repeat-purchase behaviour, supporting retention planning.</li>
+      <li><b>Ownership.</b> Ran the dashboard project alone, from gathering requirements to deployment, and refined it with feedback from non-technical users.</li>
     </ul>
+    <ul class="chips"><li>Power BI</li><li>DAX</li><li>Python</li><li>Scikit-learn</li></ul>
+    <p style="margin-top:14px"><a href="https://drive.google.com/file/d/1JyYsDb9m5AHzuBBuxlPqj8ADcsmUvKp5/view?usp=sharing" style="border-bottom:1px solid var(--muted)">Internship completion letter</a></p>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="st">Education</h2>
+  <div class="job">
+    <!-- TODO: add your CGPA once you confirm it (resume says 8.09, old site said 8.36) -->
+    <div class="jh"><h3>B.Tech in Computer Science (AI), Marwadi University</h3><span class="when">Jul 2023 to May 2027</span></div>
+    <p style="margin-top:8px;color:var(--muted);font-size:15px">Rajkot, Gujarat</p>
+    <p>Core coursework in data structures, algorithms, databases and machine learning, with most of my learning coming from the projects above and from competitions.</p>
   </div>
 </section>
 
@@ -103,9 +156,10 @@
   <h2 class="st">Skills</h2>
   <dl>
     <dt>Languages</dt><dd>Python, C++, C, SQL</dd>
-    <dt>ML and AI</dt><dd>PyTorch, Scikit-learn, deep learning, transfer learning, Transformers, SHAP, Grad-CAM</dd>
+    <dt>ML and AI</dt><dd>PyTorch, Scikit-learn, deep learning, transfer learning, Transformers, fine-tuning, SHAP, Grad-CAM</dd>
     <dt>Computer vision</dt><dd>OpenCV, MediaPipe, CNNs, EfficientNet</dd>
-    <dt>Data</dt><dd>Pandas, NumPy, Power BI, DAX, Matplotlib, Excel</dd>
+    <dt>Concepts</dt><dd>Explainable AI, model evaluation without data leakage, drift detection, feature engineering, data structures and algorithms</dd>
+    <dt>Data and BI</dt><dd>Pandas, NumPy, Power BI, DAX, Matplotlib, Plotly, Excel</dd>
     <dt>Tools</dt><dd>Git, GitHub, VS Code, Streamlit, FastAPI, Jupyter</dd>
   </dl>
 </section>
@@ -113,12 +167,19 @@
 <section id="achievements">
   <h2 class="st">Achievements</h2>
   <ul class="ach">
-    <li><b>LeetCode:</b> 300 problems solved, contest rating 1,531, 100 Days Badge. <a href="https://leetcode.com/u/ankit070804">Profile</a></li>
-    <li><b>AI-Tech Carnival 2026:</b> 2nd place, competitive programming contest.</li>
-    <li><b>Parul Hackverse 2025:</b> reached the final round of a national hackathon.</li>
-    <li><b>IOQM 2020:</b> qualified the Indian Olympiad Qualifier in Mathematics. <a href="https://drive.google.com/file/d/1-3J5kjldg_GvGEsEEDxadyMsQcB2fzYu/view?usp=drivesdk">Certificate</a></li>
-    <li><b>Certifications:</b> <a href="https://drive.google.com/file/d/1aalMlPUxeFJ89U98GKLD8vX6KpwXxWJ2/view">Python Essentials</a> (Cisco), <a href="https://drive.google.com/file/d/1DDHhw8gQvP4TMS0jKgCLqzT0YomZRmzK/view">Python for Data Science</a> (IBM), <a href="https://drive.google.com/file/d/1-yga8P7pkkhGnDfAek572FQHrDT5M1cZ/view">SQL</a> (Oracle)</li>
+    <li><b>LeetCode.</b> 300 problems solved (144 easy, 148 medium, 8 hard), 19 contests, rating 1,531, 100 Days Badge and a 41-day best streak. <a href="https://leetcode.com/u/ankit070804">Profile</a></li>
+    <li><b>AI-Tech Carnival 2026.</b> 2nd place in the competitive programming contest.</li>
+    <li><b>Parul Hackverse 2025.</b> Reached the final round of a national-level hackathon.</li>
+    <li><b>IOQM 2020.</b> Qualified the Indian Olympiad Qualifier in Mathematics. <a href="https://drive.google.com/file/d/1-3J5kjldg_GvGEsEEDxadyMsQcB2fzYu/view?usp=drivesdk">Certificate</a></li>
+    <li><b>Python Essentials, Cisco Networking Academy.</b> <a href="https://drive.google.com/file/d/1aalMlPUxeFJ89U98GKLD8vX6KpwXxWJ2/view">Certificate</a></li>
+    <li><b>Python for Data Science, IBM.</b> Data analysis and scientific computing. <a href="https://drive.google.com/file/d/1DDHhw8gQvP4TMS0jKgCLqzT0YomZRmzK/view">Certificate</a></li>
+    <li><b>Database Programming with SQL, Oracle Academy.</b> Relational databases and query optimisation. <a href="https://drive.google.com/file/d/1-yga8P7pkkhGnDfAek572FQHrDT5M1cZ/view">Certificate</a></li>
   </ul>
+</section>
+
+<section id="contact">
+  <h2 class="st">Get in touch</h2>
+  <p>I'm happy to talk about ML projects, explainable AI, or placement prep for juniors. The quickest way to reach me is <a href="mailto:singhankit70702004@gmail.com" style="border-bottom:1px solid var(--muted)">email</a> or <a href="https://linkedin.com/in/ankit-singh-798b432a0/" style="border-bottom:1px solid var(--muted)">LinkedIn</a>.</p>
 </section>
 <p class="foot">&copy; 2026 Ankit Singh</p>
 </main>
