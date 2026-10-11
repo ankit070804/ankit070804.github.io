@@ -124,3 +124,6 @@ section{margin-bottom:20px}
   .row{padding:10px 14px}
   .st+.row{margin-top:-10px}
 }
+
+/* one divider line between sections, with 20px above and below */
+section+section{border-top:1px solid var(--line);padding-top:20px}
