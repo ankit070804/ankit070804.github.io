@@ -113,3 +113,14 @@ section{margin-bottom:40px}
   .row{margin:0 -14px;padding:20px 14px}
   .st+.row{margin-top:-8px}
 }
+
+/* 20px gap between every section and every project */
+section{margin-bottom:20px}
+.row{padding:10px 24px}
+.st+.row{margin-top:-10px}
+.st{margin-bottom:20px}
+.more{margin-top:10px}
+@media(max-width:1000px){
+  .row{padding:10px 14px}
+  .st+.row{margin-top:-10px}
+}
