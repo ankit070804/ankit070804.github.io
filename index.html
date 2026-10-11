@@ -1,210 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankit Singh - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankit Singh | AI/ML Engineer</title>
+<meta name="description" content="Ankit Singh, AI/ML engineer. Projects in computer vision, NLP and explainable AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12202e;--paper:#f4f6f8;--line:#d3dae1;--muted:#56677a;--accent:#2457c5;--on:#e8a317}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Schibsted Grotesk',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+main{max-width:760px;margin:0 auto;padding:72px 24px 48px}
+h1{font-size:clamp(44px,9vw,76px);font-weight:800;line-height:1.02;letter-spacing:-0.03em}
+h2{font-size:22px;font-weight:800;margin-bottom:20px;letter-spacing:-0.01em}
+section{padding-top:64px}
+.role{font-size:20px;margin-top:16px;font-weight:500}
+.lede{color:var(--muted);margin-top:12px;max-width:60ch}
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;font-weight:600}
+.morse{margin-top:40px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.word{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+.letter{display:flex;gap:6px;align-items:center}
+.m{height:12px;border-radius:6px;background:var(--line);transition:background .12s}
+.m.dot{width:12px}.m.dash{width:34px}
+.m.on{background:var(--on)}
+.cap{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-top:14px;font-size:15px;color:var(--muted)}
+.cap button{font:inherit;color:var(--accent);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.proj{padding:24px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{font-size:19px;font-weight:600}
+.stack{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);margin:4px 0 10px}
+.proj p{max-width:64ch}
+.proj .go{display:inline-block;margin-top:8px;font-weight:600}
+details{border-top:1px solid var(--line);padding-top:20px}
+summary{cursor:pointer;font-weight:600}
+details ul{margin-top:12px;padding-left:20px;color:var(--muted)}
+details li{margin-bottom:6px}
+.job{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.job h3{font-size:19px;font-weight:600}
+.when{color:var(--muted);font-size:15px}
+ul.pts{margin-top:12px;padding-left:20px;max-width:64ch}
+ul.pts li{margin-bottom:8px}
+dl{display:grid;grid-template-columns:150px 1fr;gap:10px 20px}
+dt{font-weight:600}
+dd{color:var(--muted)}
+.ach{list-style:none}
+.ach li{padding:10px 0;border-top:1px solid var(--line)}
+.ach li:first-child{border-top:0}
+.ach b{font-weight:600}
+footer{max-width:760px;margin:0 auto;padding:40px 24px 64px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer p{margin-top:6px}
+@media(max-width:560px){body{font-size:16px}main{padding-top:48px}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.m{transition:none}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">AS</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<main>
+<header>
+  <h1>Ankit Singh</h1>
+  <p class="role">AI/ML engineer. Joining Injala.</p>
+  <p class="lede">B.Tech in Computer Science (AI) at Marwadi University, Rajkot. I build machine learning systems for real problems, like letting people communicate with eye blinks, or showing why a model called a face fake.</p>
+  <nav class="links" aria-label="Links">
+    <a href="https://github.com/ankit070804">GitHub</a>
+    <a href="https://linkedin.com/in/ankit-singh-798b432a0/">LinkedIn</a>
+    <a href="https://leetcode.com/u/ankit070804">LeetCode</a>
+    <a href="mailto:singhankit70702004@gmail.com">Email</a>
+    <a href="Ankit-Singh-Resume.pdf">Resume (PDF)</a>
+  </nav>
 
-    <section class="hero" id="about">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <h1>Ankit Singh</h1>
-            
-            <h2 style="font-size: 24px; color: #ffffff; margin-bottom: 20px; font-weight: 700;">About Me</h2>
-            
-            <div class="hero-description" style="font-size: 18px; line-height: 1.8; color: #cbd5e1; max-width: 900px;">
-                <p>Computer Science student specializing in AI and Data Analytics. I architect end-to-end solutions that bridge the gap between complex datasets and strategic business outcomes through machine learning and production-grade analytics systems.</p>
-                
-                <p style="margin-top: 20px;">Experienced in leading full-cycle BI projects, including a government-level Power BI dashboard from data modeling to secure deployment. I combine rigorous statistical analysis with clear data storytelling to ensure technical insights drive measurable impact.</p>
-            </div>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Academic Background</h2>
-        </div>
-        <div class="education-card">
-            <div class="education-content">
-                <div class="edu-header">
-                    <div>
-                        <h3 class="edu-university">Marwadi University</h3>
-                        <p class="edu-degree">Bachelor of Technology in Computer Science</p>
-                        <p class="edu-location">📍 Rajkot, Gujarat</p>
-                    </div>
-                    <div class="edu-cgpa">CGPA: 8.36</div>
-                </div>
-                <p style="color: #94a3b8; margin-top: 20px;">July 2023 – May 2027</p>
-            </div>
-        </div>
+  <div class="morse">
+    <div class="word" id="word" role="img" aria-label="My name, Ankit, in Morse code"></div>
+    <div class="cap">
+      <span>That is my name in Morse code. My main project turns eye blinks into text this way.</span>
+      <button id="replay" type="button">Replay</button>
     </div>
+  </div>
+</header>
 
-    <div class="container" id="experience">
-        <div class="section-header">
-            <h2 class="section-title">Professional Journey</h2>
-            <p class="section-subtitle">Building impactful data solutions and driving business decisions through analytics</p>
-        </div>
-        <div class="experience-timeline">
-            <div class="experience-item">
-                <div class="exp-header">
-                    <div>
-                        <h3 class="exp-title">AI and Data Analytics Intern</h3>
-                        <p class="exp-company">Printf Technologies · Ahmedabad, Gujarat</p>
-                    </div>
-                    <div class="exp-date">June 2025 – Dec 2025</div>
-                </div>
-                <ul class="exp-highlights">
-                    <li><strong>Ownership:</strong> Led the end-to-end development of a Power BI–based tax collection dashboard for a Gram Panchayat, translating stakeholder requirements into actionable insights.</li>
-                    <li><strong>Requirements:</strong> Collaborated with Gram Panchayat officials to gather requirements, design data models, and integrate live tax collection data for real-time reporting.</li>
-                    <li><strong>Analysis:</strong> Analyzed tax collection data to identify key performance indicators (KPIs) such as revenue targets and collection efficiency, enabling data-driven financial decision-making.</li>
-                    <li><strong>Visualization:</strong> Designed, customized, and iteratively refined interactive Power BI dashboards and visualizations to improve usability for non-technical stakeholders.</li>
-                    <li><strong>Deployment:</strong> Deployed the finalized dashboard on the company server and independently configured the Power BI Gateway for automated and secure data refresh.</li>
-                    <li><strong>Leadership:</strong> Managed the complete project lifecycle independently, demonstrating strong ownership, technical expertise, and effective stakeholder communication.</li>
-                </ul>
-                <a href="https://drive.google.com/file/d/1JyYsDb9m5AHzuBBuxlPqj8ADcsmUvKp5/view?usp=sharing" target="_blank" class="project-link" style="margin-top: 15px; display: inline-block;">View Internship Completion Letter →</a>
-            </div>
-        </div>
-    </div>
+<section id="projects">
+  <h2>Projects</h2>
 
-    <div class="container" id="projects">
-        <div class="section-header">
-            <h2 class="section-title">Featured Work</h2>
-            <p class="section-subtitle">Exploring data science and machine learning through real-world applications</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon">📊</div>
-                <h3 class="project-title">Bank Data Analysis</h3>
-                <p class="project-description">Cleaned and analyzed banking data using SQL and Excel to build an interactive Power BI dashboard that identified regional spending patterns and drove data-driven strategic decisions. (FP20 Challenge)</p>
-                <a href="https://app.powerbi.com/view?r=eyJrIjoiOTAwNjQwODEtMDVkNC00ZTg4LWEwYzUtMjdmZTMzYTdhNTk5IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9" target="_blank" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">🏠</div>
-                <h3 class="project-title">Boston House Price Prediction</h3>
-                <p class="project-description">Developed a Linear Regression model using Scikit-learn and Matplotlib, applying feature scaling and data visualization to predict housing prices with high accuracy.</p>
-                <a href="https://github.com/ankit070804/Boston-housing-price" target="_blank" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">📱</div>
-                <h3 class="project-title">Social Media Performance Analysis</h3>
-                <p class="project-description">Analyzed engagement metrics using SQL and Python (Pandas) to create a Power BI dashboard identifying top-performing content types and platforms like YouTube and Educational posts. (ONYX)</p>
-                <a href="https://github.com/ankit070804/ONYX-DATA-challenge-Social-Media-Analysis/tree/main" target="_blank" class="project-link">View Project →</a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon">🏢</div>
-                <h3 class="project-title">Real Estate Valuation</h3>
-                <p class="project-description">Built a Scikit-learn regression model using temporal features and convenience metrics to predict property prices, converting final outputs to USD for standardized interpretation. (Taiwan Housing Dataset)</p>
-                <a href="https://github.com/ankit070804/Real-Estate-Valuation" target="_blank" class="project-link">View Project →</a>
-            </div>
-        </div>
-    </div>
+  <article class="proj">
+    <h3>Assistive communication framework</h3>
+    <p class="stack">Python, PyTorch, OpenCV, MediaPipe, Transformers</p>
+    <p>Converts eye blinks into Morse code so people who cannot speak or type can still communicate. It adds Sign Language Grammar (SLG), a Trie for word prediction and a Digital Twin for logging. I fine-tuned and compared Transformer models for SLG-to-English translation and picked Flan-T5-small for the best quality and latency trade-off. It cuts blinks by 26.7% on average, and up to 44.9% for long sentences.</p>
+    <!-- TODO: replace with the exact repo link -->
+    <a class="go" href="https://github.com/ankit070804">Code on GitHub</a>
+  </article>
 
-    <div class="container" id="skills">
-        <div class="section-header">
-            <h2 class="section-title">Technical Expertise</h2>
-            <p class="section-subtitle">Comprehensive toolkit for data analysis and machine learning</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">🐍</div>
-                <h3 class="skill-title">Programming & Data Analysis</h3>
-                <p class="skill-items">Python, Pandas, NumPy, SQL (MySQL)</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🤖</div>
-                <h3 class="skill-title">Machine Learning</h3>
-                <p class="skill-items">Scikit-learn, Regression Models, Feature Engineering</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">📈</div>
-                <h3 class="skill-title">Data Visualization & BI</h3>
-                <p class="skill-items">Power BI, Microsoft Excel, Matplotlib, Dashboard Design</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3 class="skill-title">Software Development</h3>
-                <p class="skill-items">Java, C++, C</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🧠</div>
-                <h3 class="skill-title">Analytical Strengths</h3>
-                <p class="skill-items">Critical Thinking, Data Storytelling, Communication, Problem Solving</p>
-            </div>
-        </div>
-    </div>
+  <article class="proj">
+    <h3>Explainable deepfake detection</h3>
+    <p class="stack">PyTorch, EfficientNet-B0, OpenCV, Streamlit</p>
+    <p>Classifies a face image as real or fake, then uses Grad-CAM to highlight the regions that drove the decision, so the prediction can be checked instead of trusted blindly.</p>
+    <!-- TODO: replace with the exact repo link -->
+    <a class="go" href="https://github.com/ankit070804">Code on GitHub</a>
+  </article>
 
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Certifications & Recognition</h2>
-        </div>
-        <div class="achievements-grid">
-            <div class="achievement-card">
-                <div class="achievement-icon">🏆</div>
-                <h3 class="achievement-title">IOQM Qualifier</h3>
-                <p class="achievement-description">Qualified the Indian Olympiad Qualifier in Mathematics (IOQM) in 2020</p>
-                <a href="https://drive.google.com/file/d/1-3J5kjldg_GvGEsEEDxadyMsQcB2fzYu/view?usp=drivesdk" target="_blank" class="project-link">View Certificate →</a>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">🐍</div>
-                <h3 class="achievement-title">Python Essentials</h3>
-                <p class="achievement-description">Cisco Networking Academy</p>
-                <a href="https://drive.google.com/file/d/1aalMlPUxeFJ89U98GKLD8vX6KpwXxWJ2/view" target="_blank" class="project-link">View Certificate →</a>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">📊</div>
-                <h3 class="achievement-title">Python for Data Science</h3>
-                <p class="achievement-description">IBM - Data analysis and scientific computing</p>
-                <a href="https://drive.google.com/file/d/1DDHhw8gQvP4TMS0jKgCLqzT0YomZRmzK/view" target="_blank" class="project-link">View Certificate →</a>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">💾</div>
-                <h3 class="achievement-title">SQL Database Programming</h3>
-                <p class="achievement-description">Oracle Academy - Relational databases and query optimization</p>
-                <a href="https://drive.google.com/file/d/1-yga8P7pkkhGnDfAek572FQHrDT5M1cZ/view" target="_blank" class="project-link">View Certificate →</a>
-            </div>
-        </div>
-    </div>
+  <article class="proj">
+    <h3>Fake news propagation system</h3>
+    <p class="stack">Python, Scikit-learn, Streamlit, Plotly</p>
+    <p>TF-IDF and Random Forest classifier trained on 800+ PolitiFact articles, with 77% accuracy and a 0.77 F1-score. It runs in Streamlit with live probability scores and simulates how a story spreads using the SIR model.</p>
+    <!-- TODO: replace with the exact repo link -->
+    <a class="go" href="https://github.com/ankit070804">Code on GitHub</a>
+  </article>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <h2 class="footer-title">Let's Work Together</h2>
-            <p class="footer-text">I'm always interested in hearing about new opportunities and collaborations.</p>
-            <div class="social-links">
-                <a href="mailto:singhankit70702004@gmail.com" class="social-link" title="Email">
-                    <img src="mail.png" alt="Email">
-                </a>
-                <a href="https://linkedin.com/in/ankit-singh-798b432a0/" target="_blank" class="social-link" title="LinkedIn">
-                    <img src="linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/ankit070804" target="_blank" class="social-link" title="GitHub">
-                    <img src="github.png" alt="GitHub">
-                </a>
-                <a href="tel:6353057640" class="social-link" title="Phone">
-                    <img src="call.png" alt="Phone">
-                </a>
-            </div>
-            <p class="copyright">© 2025 Ankit Singh. All rights reserved.</p>
-        </div>
-    </footer>
+  <details>
+    <summary>Earlier data analytics work</summary>
+    <ul>
+      <li><a href="https://app.powerbi.com/view?r=eyJrIjoiOTAwNjQwODEtMDVkNC00ZTg4LWEwYzUtMjdmZTMzYTdhNTk5IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9">Bank data analysis</a>: SQL, Excel and a Power BI dashboard of regional spending patterns (FP20 Challenge).</li>
+      <li><a href="https://github.com/ankit070804/ONYX-DATA-challenge-Social-Media-Analysis/tree/main">Social media performance analysis</a>: SQL, Pandas and Power BI on engagement by platform and content type (ONYX).</li>
+      <li><a href="https://github.com/ankit070804/Real-Estate-Valuation">Real estate valuation</a>: regression model on the Taiwan housing dataset.</li>
+      <li><a href="https://github.com/ankit070804/Boston-housing-price">House price prediction</a>: linear regression with feature scaling.</li>
+    </ul>
+  </details>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <div><h3>AI and Data Analytics Intern</h3><p class="when">Printf Technologies, Ahmedabad</p></div>
+    <p class="when">Jun 2025 to Dec 2025</p>
+  </div>
+  <ul class="pts">
+    <li>Built a Power BI tax collection dashboard for a Gram Panchayat, tracking revenue targets and collection efficiency, with automated refresh through a Power BI Gateway I configured myself.</li>
+    <li>Trained a Random Forest classifier on 10,000+ customer transactions to predict churn and repeat purchases.</li>
+    <li>Ran the dashboard project alone, from gathering requirements to deployment and iteration with non-technical users.</li>
+  </ul>
+  <p style="margin-top:10px"><a href="https://drive.google.com/file/d/1JyYsDb9m5AHzuBBuxlPqj8ADcsmUvKp5/view?usp=sharing">Internship completion letter</a></p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>Python, C++, C, SQL</dd>
+    <dt>ML and AI</dt><dd>PyTorch, Scikit-learn, deep learning, transfer learning, explainable AI (Grad-CAM), Transformers</dd>
+    <dt>Computer vision</dt><dd>OpenCV, MediaPipe, CNNs, EfficientNet</dd>
+    <dt>Data</dt><dd>Pandas, NumPy, Power BI, DAX, Matplotlib, Excel</dd>
+    <dt>Tools</dt><dd>Git, GitHub, Streamlit, Jupyter</dd>
+  </dl>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <ul class="ach">
+    <li><b>LeetCode:</b> 300 problems solved, contest rating 1,531, 100 Days Badge.</li>
+    <li><b>AI-Tech Carnival 2026:</b> 2nd place, competitive programming contest.</li>
+    <li><b>Parul Hackverse 2025:</b> reached the final round of a national hackathon.</li>
+    <li><b>IOQM 2020:</b> qualified the Indian Olympiad Qualifier in Mathematics. <a href="https://drive.google.com/file/d/1-3J5kjldg_GvGEsEEDxadyMsQcB2fzYu/view?usp=drivesdk">Certificate</a></li>
+    <li><b>Certifications:</b> <a href="https://drive.google.com/file/d/1aalMlPUxeFJ89U98GKLD8vX6KpwXxWJ2/view">Python Essentials</a> (Cisco), <a href="https://drive.google.com/file/d/1DDHhw8gQvP4TMS0jKgCLqzT0YomZRmzK/view">Python for Data Science</a> (IBM), <a href="https://drive.google.com/file/d/1-yga8P7pkkhGnDfAek572FQHrDT5M1cZ/view">Database Programming with SQL</a> (Oracle).</li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <p>Open to conversations about ML, computer vision and placements advice for juniors. The fastest way to reach me is <a href="mailto:singhankit70702004@gmail.com">email</a> or <a href="https://linkedin.com/in/ankit-singh-798b432a0/">LinkedIn</a>.</p>
+  <p>&copy; 2026 Ankit Singh</p>
+</footer>
+
+<script>
+(function(){
+  var code={A:'.-',N:'-.',K:'-.-',I:'..',T:'-'},word=document.getElementById('word'),marks=[],timers=[];
+  'ANKIT'.split('').forEach(function(ch){
+    var l=document.createElement('span');l.className='letter';
+    code[ch].split('').forEach(function(s){
+      var m=document.createElement('span');m.className='m '+(s==='.'?'dot':'dash');
+      l.appendChild(m);marks.push({el:m,len:s==='.'?1:3});
+    });
+    word.appendChild(l);
+  });
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play(){
+    timers.forEach(clearTimeout);timers=[];
+    marks.forEach(function(x){x.el.classList.remove('on')});
+    if(reduce){marks.forEach(function(x){x.el.classList.add('on')});return}
+    var t=500,u=170;
+    marks.forEach(function(x){
+      timers.push(setTimeout(function(){x.el.classList.add('on')},t));
+      t+=x.len*u+u;
+    });
+  }
+  document.getElementById('replay').addEventListener('click',play);
+  play();
+})();
+</script>
 </body>
 </html>
